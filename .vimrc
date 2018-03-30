@@ -6,12 +6,11 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Plugins 
-" Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 
 Plugin 'altercation/vim-colors-solarized'
  	
@@ -19,7 +18,7 @@ Plugin 'valloric/youcompleteme'
 
 Plugin 'myusuf3/numbers.vim'
 
-" Plugin 'kakkyz81/evervim'
+Plugin 'kakkyz81/evervim'
 
 Plugin 'godlygeek/tabular'
 
@@ -38,7 +37,7 @@ nnoremap <Leader>t :EvervimListTags<CR>
 
 syntax enable
 set shiftwidth=4    " Indents will have a width of 4
-let g:evervim_devtoken='S=s692:U=99850e3:E=16284288d8d:C=15b2c775dc0:P=1cd:A=en-devtoken:V=2:H=c0cef74ee639f50aa211f6a7721f34cb'
+let g:evervim_devtoken=''
   if has("autocmd")
 
     au BufReadPost *.rkt,*.rktl set filetype=scheme

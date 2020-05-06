@@ -3,10 +3,14 @@
 
 # Path to your oh-my-zsh installation.
 # Macos :(
-export ZSH="/Users/josh/.oh-my-zsh" 
-
-# Linux :)
-# export ZSH="/home/josh/.oh-my-zsh"
+case `uname` in
+    Darwin)
+    export ZSH="/Users/josh/.oh-my-zsh" 
+    ;;
+    Linux)
+    export ZSH="/home/josh/.oh-my-zsh"
+    ;;
+esac
 #
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

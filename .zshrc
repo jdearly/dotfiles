@@ -2,7 +2,6 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-# Macos :(
 case `uname` in
     Darwin)
     export ZSH="/Users/josh/.oh-my-zsh" 

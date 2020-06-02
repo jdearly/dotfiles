@@ -7,8 +7,8 @@ set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin()
-Plug 'ycm-core/YouCompleteMe'
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-comnmunity/gruvbox'
+Plug 'neoclide/coc.vim', {'branch': 'release'}
 call plug#end()
 
 colorscheme gruvbox

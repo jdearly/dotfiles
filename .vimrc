@@ -13,4 +13,5 @@ Plug 'neoclide/coc.vim', {'branch': 'release'}
 call plug#end()
 
 colorscheme gruvbox
-set background=dark
+
+let g:gruvbox_contrast_dark='hard'

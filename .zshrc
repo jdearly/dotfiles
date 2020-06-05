@@ -7,7 +7,7 @@ case `uname` in
     export ZSH="/Users/josh/.oh-my-zsh" 
     ;;
     Linux)
-    export ZSH="/home/jearly/.oh-my-zsh"
+    export ZSH="/home/josh/.oh-my-zsh"
     ;;
 esac
 #

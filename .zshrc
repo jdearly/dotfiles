@@ -7,7 +7,7 @@ case `uname` in
     export ZSH="/Users/josh/.oh-my-zsh" 
     ;;
     Linux)
-    export ZSH="/home/josh/.oh-my-zsh"
+    export ZSH="/home/jearly/.oh-my-zsh"
     ;;
 esac
 #
@@ -15,7 +15,7 @@ esac
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="random"
+ZSH_THEME="robbyrussell"
 # robbyrussell
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -104,3 +104,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias packages="comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)"

@@ -8,8 +8,9 @@ set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin()
-Plug 'gruvbox-comnmunity/gruvbox'
-Plug 'neoclide/coc.vim', {'branch': 'release'}
+Plug 'gruvbox-community/gruvbox'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jceb/vim-orgmode'
 call plug#end()
 
 colorscheme gruvbox

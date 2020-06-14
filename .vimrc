@@ -11,6 +11,8 @@ call plug#begin()
 Plug 'gruvbox-community/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jceb/vim-orgmode'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 colorscheme gruvbox

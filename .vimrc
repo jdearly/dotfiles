@@ -1,12 +1,4 @@
-syntax on
-set tabstop=4 softtabstop=4
-set shiftwidth=4
-set expandtab
-set smartindent
-set number
-set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=lightgrey
-
+" plugins
 call plug#begin()
 Plug 'gruvbox-community/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -15,6 +7,16 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 call plug#end()
 
+" set things
+syntax on
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set number
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 colorscheme gruvbox
 
+" let things
 let g:gruvbox_contrast_dark='hard'

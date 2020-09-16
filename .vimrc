@@ -21,7 +21,6 @@ colorscheme gruvbox
 " let things
 let g:gruvbox_contrast_dark='hard'
 
-
 " Use tab for trigger completion with characters ahead and navigate
 inoremap <silent><expr> <TAB>
             \ pumvisible() ? "\<C-n>" :

@@ -1,0 +1,35 @@
+Yay: pacman -S --needed git base-devel 
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+(note: this will also install golang, no need to install later)
+
+Oh-my-zsh: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+Neovim: sudo pacman -S neovim
+
+Plug: sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+Packages: discord, parsec-bin, nodejs
+
+Dotfiles: git clone https://github.com/jdearly/dotfiles.git
+
+Symlink dotfiles:
+ln -s ~/dotfiles/.vimrc ~/.config/nvim/init.vim
+ln -s ~/dotfiles/.zshrc ~/.zshrc
+
+# TODO: check for directory, otherwise create new
+xfce theme (place in ~/.local/share/xfce4/terminal/colorschemes: 
+[Scheme]
+Name=Gruvbox (dark)
+ColorForeground=#f2f2e5e5bcbc
+ColorBackground=#323230302f2f
+ColorCursor=#d65bc4cd8ca1
+ColorPalette=#323230302f2f;#cccc24241d1d;#989897971a1a;#d7d799992121;#454585858888;#b1b162628686;#68689d9d6a6a;#f2f2e5e5bcbc;#1d1d20202121;#fbfb49493434;#b8b8bbbb2626;#fafabdbd2f2f;#8383a5a59898;#d3d386869b9b;#8e8ec0c07c7c;#fffff1f1c6c6
+
+Rofi config:
+create the file: ~/.config/rofi/config
+    rofi.theme: ~/.config/rofi/themes/gruvbox/gruvbox-dark.rasi
+git clone https://github.com/bardisty/gruvbox-rofi ~/.config/rofi/themes/gruvbox
+

@@ -27,13 +27,13 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+space exec --no-startup-id dmenu_recency
+bindsym $mod+space exec --no-startup-id dmenu_run
 # bindsym $mod+space exec rofi -show run
 
 # launch categorized menu
@@ -65,7 +65,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec brave 
+bindsym $mod+F2 exec firefox 
 bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
@@ -158,6 +158,22 @@ set $ws5 5:spotify
 set $ws6 6:parsec
 set $ws7 7:
 set $ws8 8:
+set $ws9 9:
+set $ws10 10:
+
+set $monitor_left DP-1
+set $monitor_right DP-2
+
+workspace $ws1 output $monitor_right
+workspace $ws2 output $monitor_left
+workspace $ws3 output $monitor_right
+workspace $ws4 output $monitor_right
+workspace $ws5 output $monitor_right
+workspace $ws6 output $monitor_right
+workspace $ws7 output $monitor_right
+workspace $ws8 output $monitor_right
+workspace $ws9 output $monitor_right
+workspace $ws10 output $monitor_right
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -334,13 +350,13 @@ bar {
 	position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
+	tray_output primary
 #	tray_output eDP1
 
 	bindsym button4 nop
 	bindsym button5 nop
 #   font xft:URWGothic-Book 11
-	strip_workspace_numbers yes
+	strip_workspace_numbers no
 
     colors {
         background #222D31
@@ -348,6 +364,8 @@ bar {
         separator  #454947
 
 #                      border  backgr. text
+#  Fedora blue  0b57a4
+#  Manjaro green 16a085 
         focused_workspace  #F9FAF9 #16a085 #292F34
         active_workspace   #595B5B #353836 #FDF6E3
         inactive_workspace #595B5B #222D31 #EEE8D5

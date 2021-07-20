@@ -1,7 +1,8 @@
 " plugins
 call plug#begin()
 Plug 'gruvbox-community/gruvbox'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neovim/nvim-lspconfig'
 Plug 'jceb/vim-orgmode'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
@@ -17,6 +18,26 @@ set number
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 colorscheme gruvbox
+
+" LSPs
+lua <<EOF
+require'lspconfig'.tsserver.setup{}
+require'lspconfig'.clangd.setup {}
+require'lspconfig'.pyls.setup{}
+require'lspconfig'.yamlls.setup{}
+require'lspconfig'.gopls.setup{
+    on_attach=on_attach,
+    cmd = {"gopls", "serve"},
+    settings = {
+        gopls = {
+            analyses = {
+                unusedparams = true,
+            },
+            staticcheck = true,
+        },
+    },
+}
+EOF
 
 " let things
 let g:gruvbox_contrast_dark='hard'

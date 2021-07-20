@@ -1,4 +1,6 @@
 export PATH="$HOME/neovim/build/bin:$PATH"
+export PATH="$HOME/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 case `uname` in
     Darwin)
@@ -14,6 +16,7 @@ esac
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+SOLARIZED_THEME="dark"
 # robbyrussell
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load

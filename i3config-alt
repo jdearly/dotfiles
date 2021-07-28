@@ -256,13 +256,13 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+0 mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+    bindsym l exec --no-startup-id ~/dotfiles/i3exit lock, mode "default"
+    bindsym s exec --no-startup-id ~/dotfiles/i3exit suspend, mode "default"
+    bindsym u exec --no-startup-id ~/dotfiles/i3exit switch_user, mode "default"
+    bindsym e exec --no-startup-id ~/dotfiles/i3exit logout, mode "default"
+    bindsym h exec --no-startup-id ~/dotfiles/i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id ~/dotfiles/i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id ~/dotfiles/i3exit shutdown, mode "default"
 
     # exit system mode: "Enter" or "Escape"
     bindsym Return mode "default"
@@ -294,23 +294,18 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+9 exec --no-startup-id i3lock
+bindsym $mod+9 exec --no-startup-id i3lock -i ~/Pictures/forest.png
 
 # Autostart applications
 exec --no-startup-id feh --bg-scale ~/Pictures/forest.png
 #/usr/share/backgrounds/f34/default/f34-02-night.png
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; picom -b --experimental-backend
-exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
-exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
-# exec --no-startup-id blueman-applet
-# exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_maia
-# exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xautolock -time 10 -locker i3lock -i ~/Pictures/forest.png
+
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 # swap caps lock and escape
@@ -342,7 +337,7 @@ set_from_resource $term_color6     color6
 set_from_resource $term_color7     color7
 set_from_resource $term_color8     color8
 set_from_resource $term_color9     color9
-set_from_resource $term_color10    color10
+set_from_resource $term_color10    color1
 set_from_resource $term_color11    color11
 set_from_resource $term_color12    color12
 set_from_resource $term_color13    color13

@@ -23,7 +23,7 @@ colorscheme gruvbox
 lua <<EOF
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.clangd.setup {}
-require'lspconfig'.pyls.setup{}
+require'lspconfig'.pylsp.setup{}
 require'lspconfig'.yamlls.setup{}
 require'lspconfig'.gopls.setup{
     on_attach=on_attach,

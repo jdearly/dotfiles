@@ -3,6 +3,9 @@ call plug#begin()
 Plug 'gruvbox-community/gruvbox'
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neovim/nvim-lspconfig'
+Plug 'mfussenegger/nvim-jdtls'
+Plug 'mfussenegger/nvim-dap'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
 Plug 'jceb/vim-orgmode'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'

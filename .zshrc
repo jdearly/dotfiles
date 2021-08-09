@@ -110,3 +110,4 @@ export PATH="$HOME/neovim/build/bin:$PATH"
 export PATH="$HOME/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export GOPATH=$HOME/go
+export PATH="$PATH:$GOPATH/bin"

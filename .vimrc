@@ -39,6 +39,7 @@ set smartindent
 set number
 set colorcolumn=80
 set completeopt=menuone,noselect
+set scrolloff=8
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 colorscheme gruvbox
 

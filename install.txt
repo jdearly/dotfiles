@@ -27,6 +27,10 @@ Packages: discord, parsec-bin, nodejs
 Dotfiles: git clone https://github.com/jdearly/dotfiles.git
 
 Symlink dotfiles:
+mkdir i3
+mkdir i3status
+mkdir nvim
+rm ~/.zshrc
 ln -s ~/dotfiles/.vimrc ~/.config/nvim/init.vim
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/i3config ~/.config/i3/config

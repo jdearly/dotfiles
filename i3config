@@ -156,8 +156,8 @@ set $ws3 3:ide
 set $ws4 4:comm
 set $ws5 5:music
 set $ws6 6:production
-set $ws7 7:
-set $ws8 8:
+set $ws7 7:games
+set $ws8 8:misc
 set $ws9 9:
 set $ws10 10:
 

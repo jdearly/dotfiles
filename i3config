@@ -362,11 +362,7 @@ bar {
 	position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-<<<<<<< HEAD
-	tray_output primary
-=======
 	#tray_output primary
->>>>>>> ec6bd0842ad82eafacb3238f225395c61bd20368
 	#tray_output DP1
     #tray_output HDMI-0
 

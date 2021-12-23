@@ -60,8 +60,8 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 ################################################################################################
 
 # Screen brightness controls
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 5; notify-send 'brightness up'"
+bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 5; notify-send 'brightness down'"
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
@@ -252,7 +252,6 @@ for_window [class="(?i)*nextcloud*"] floating disable
 for_window [class="plasmashell" window_type="notification"] floating enable, border none, move position 2200px 35px 
 no_focus [class="plasmashell" window_type="notification"]
 
-# switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
 # reload the configuration file
@@ -309,14 +308,14 @@ mode "resize" {
 bindsym $mod+9 exec --no-startup-id i3lock -i ~/Pictures/forest.png
 
 # Autostart applications
-exec --no-startup-id feh --bg-scale ~/Pictures/forest.png
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
 #/usr/share/backgrounds/f34/default/f34-02-night.png
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b --experimental-backend
+#exec --no-startup-id nitrogen --restore; sleep 1; picom -b --experimental-backend
 exec --no-startup-id nm-applet
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
-exec --no-startup-id xautolock -time 10 -locker i3lock -i ~/Pictures/forest.png
+exec --no-startup-id xautolock -time 10 -locker i3lock -i ~/Pictures/wallpaper.jpg
 
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
@@ -363,7 +362,11 @@ bar {
 	position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
+<<<<<<< HEAD
 	tray_output primary
+=======
+	#tray_output primary
+>>>>>>> ec6bd0842ad82eafacb3238f225395c61bd20368
 	#tray_output DP1
     #tray_output HDMI-0
 
@@ -397,8 +400,8 @@ bindsym $mod+m bar mode toggle
 
 # Screen brightness keys
 # (This should work for both acpilight or xbacklight.)
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+#bindsym XF86MonBrightnessUp exec xbacklight -inc 20
+#bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 
 #######
 #THEME#

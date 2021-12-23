@@ -175,6 +175,11 @@ workspace $ws8 output $monitor_right
 workspace $ws9 output $monitor_right
 workspace $ws10 output $monitor_right
 
+exec --no-startup-id i3-msg 'workspace 5:music; exec spotify'
+exec --no-startup-id i3-msg 'workspace 4:comm; exec discord'
+exec --no-startup-id i3-msg 'workspace 2:browser; exec brave-browser'
+exec --no-startup-id i3-msg 'workspace 1:term; exec konsole'
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -206,10 +211,10 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
-# assign [class="Thunderbird"] $ws1
-# assign [class="Pale moon"] $ws2
-# assign [class="Pcmanfm"] $ws3
-# assign [class="Skype"] $ws5
+assign [class="konsole"] $ws1
+assign [class="Brave"] $ws2
+assign [class="discord"] $ws4
+for_window [class="Spotify"] move to workspace $ws5
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -226,20 +231,16 @@ for_window [title="MuseScore: Play Panel"] floating enable
 for_window [class="Nitrogen"] floating enable sticky enable border normal
 for_window [class="Oblogout"] fullscreen enable
 for_window [class="octopi"] floating enable
-for_window [title="About Pale Moon"] floating enable
-for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
-for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 
 for_window [title="Desktop — Plasma"] kill, floating enable, border none
-for_window [class="plasmashell"] floating enable
 for_window [class="Plasma"] floating enable, border none
 for_window [title="plasma-desktop"] floating enable, border none
 for_window [title="win7"] floating enable, border none
@@ -248,7 +249,7 @@ for_window [class="Kmix"] floating enable, border none
 for_window [class="Klipper"] floating enable, border none
 for_window [class="Plasmoidviewer"] floating enable, border none
 for_window [class="(?i)*nextcloud*"] floating disable
-for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px
+for_window [class="plasmashell" window_type="notification"] floating enable, border none, move position 2200px 35px 
 no_focus [class="plasmashell" window_type="notification"]
 
 # switch to workspace with urgent window automatically
@@ -363,8 +364,8 @@ bar {
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 	tray_output primary
-	tray_output DP1
-    tray_output HDMI-0
+	#tray_output DP1
+    #tray_output HDMI-0
 
 	bindsym button4 nop
 	bindsym button5 nop

@@ -30,12 +30,14 @@ Symlink dotfiles:
 mkdir i3
 mkdir i3status
 mkdir nvim
+mkdir nvim/ftplugin
 rm ~/.zshrc
 ln -s ~/dotfiles/.vimrc ~/.config/nvim/init.vim
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/i3config ~/.config/i3/config
 ln -s ~/dotfiles/i3status ~/.config/i3status/config
 ln -s ~/dotfiles/kde-i3.sh ~/.config/plasma-workspace/env
+ln -s ~/dotfiles/java.lua ~/.config/nvim/ftplugin/java.lua
 
 # Install JetBrains Toolbox
 ./install-toolbox.sh

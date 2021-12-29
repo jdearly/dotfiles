@@ -26,6 +26,10 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'jceb/vim-orgmode'
 Plug 'vim-airline/vim-airline'
 
+" Fuzzy 
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 " Git
 Plug 'tpope/vim-fugitive'
 call plug#end()

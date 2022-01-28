@@ -11,7 +11,7 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'hrsh7th/vim-vsnip'
 
 " Language support
-Plug 'darrikonn/vim-gofmt', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Plug 'glepnir/lspsaga.nvim'
 " Plug 'simrat39/symbols-outline.nvim'
 

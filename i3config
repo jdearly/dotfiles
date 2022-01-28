@@ -33,8 +33,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+space exec --no-startup-id dmenu_run -sb '#689d68'
-# bindsym $mod+space exec rofi -show run
+# bindsym $mod+space exec --no-startup-id dmenu_run -sb '#689d68'
+bindsym $mod+space exec rofi -show run
 
 # launch categorized menu
 # bindsym $mod+z exec --no-startup-id morc_menu

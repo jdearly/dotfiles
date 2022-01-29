@@ -65,7 +65,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 5; notify-se
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec firefox 
+bindsym $mod+F2 exec brave-browser
 # bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 # bindsym $mod+Shift+F3 exec pcmanfm_pkexec
@@ -312,8 +312,8 @@ exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
 #/usr/share/backgrounds/f34/default/f34-02-night.png
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id nitrogen --restore; sleep 1; picom -b --experimental-backend
-exec --no-startup-id nm-applet
-exec --no-startup-id pamac-tray
+#exec --no-startup-id nm-applet
+#exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id xautolock -time 10 -locker i3lock -i ~/Pictures/wallpaper.jpg
 
@@ -359,15 +359,15 @@ set_from_resource $term_color15    color15
 bar {
 	i3bar_command i3bar
 	status_command i3status
-	position bottom
+	#position bottom
 
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
+# please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 	#tray_output primary
-	#tray_output DP1
+	tray_output none
     #tray_output HDMI-0
 
-	bindsym button4 nop
-	bindsym button5 nop
+#	bindsym button4 nop
+#	bindsym button5 nop
 #   font xft:URWGothic-Book 11
 	strip_workspace_numbers no
     colors {

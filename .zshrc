@@ -11,9 +11,9 @@ esac
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
-# ZSH_THEME="intheloop" -- like this one
-ZSH_THEME="random"
+# ZSH_THEME="robbyrussell" -- default theme
+ZSH_THEME="intheloop" # current favorite
+#ZSH_THEME="random"
 SOLARIZED_THEME="dark"
 # robbyrussell
 # Set list of themes to pick from when loading at random
@@ -121,3 +121,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -107,13 +107,14 @@ alias ubuntu_packages="comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var
 alias vim="nvim"
 alias weather="curl wttr.in"
 alias doppler="mpv --loop-file=inf https://radar.weather.gov/lite/N0R/FCX_loop.gif"
+alias raudio="pulseaudio -k && sudo alsa force-reload"
 
 export PATH="$HOME/neovim/build/bin:$PATH"
 export PATH="$HOME/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export GOPATH=$HOME/go
 export PATH="$PATH:$GOPATH/bin"
-export PATH="$PATH:~/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 
 # Install Ruby Gems to ~/gems 

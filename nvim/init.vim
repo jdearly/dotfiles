@@ -1,7 +1,16 @@
+set wildignore+=*.pyc
+set wildignore+=*_build/*
+set wildignore+=**/coverage/*
+set wildignore+=**/node_modules/*
+set wildignore+=**/android/*
+set wildignore+=**/ios/*
+set wildignore+=**/.git/*
+
 " plugins
 call plug#begin()
 " Colors/eye candy
 Plug 'gruvbox-community/gruvbox'
+Plug 'luisiacc/gruvbox-baby'
 Plug 'karb94/neoscroll.nvim' " probably not going to keep this
 
 " LSP stuff
@@ -33,6 +42,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Git
 Plug 'tpope/vim-fugitive'
 
+" Pretty 
+Plug 'sbdchd/neoformat'
+
 call plug#end()
 
 " set things
@@ -55,3 +67,8 @@ lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incr
 let g:gruvbox_contrast_dark='hard'
 
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+augroup highlight_yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 40})
+augroup END

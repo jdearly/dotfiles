@@ -67,7 +67,7 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 colorscheme gruvbox
 
 lua require("lsp")
-lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}
+"lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}
 
 " let things
 " let g:gruvbox_contrast_dark='hard'

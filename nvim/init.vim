@@ -14,6 +14,7 @@ call plug#begin()
 " Plug 'luisiacc/gruvbox-baby'
 Plug 'karb94/neoscroll.nvim' " probably not going to keep this
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'itchyny/lightline.vim'
 
 " LSP stuff
 Plug 'neovim/nvim-lspconfig'
@@ -40,7 +41,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug 'nvim-treesetter/playground'
 
 Plug 'jceb/vim-orgmode'
-Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline'
 
 " Fuzzy 
 Plug 'junegunn/fzf.vim'
@@ -66,15 +67,17 @@ set completeopt=menu,menuone,noselect
 set scrolloff=8
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 "colorscheme gruvbox
+"
+let g:lightline = {'colorscheme': 'tokyonight'}
+colorscheme tokyonight
+
 let g:tokyonight_style = "storm"
 let g:tokyonight_italic_functions = 1
 let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
-
 let g:tokyonight_colors = {
   \ 'hint': 'orange',
   \ 'error': '#ff0000'
 \ }
-colorscheme tokyonight
 
 lua require("lsp")
 "lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}

@@ -10,9 +10,10 @@ set wildignore+=**/.git/*
 call plug#begin()
 
 " Colors/eye candy
-Plug 'gruvbox-community/gruvbox'
-Plug 'luisiacc/gruvbox-baby'
+" Plug 'gruvbox-community/gruvbox'
+" Plug 'luisiacc/gruvbox-baby'
 Plug 'karb94/neoscroll.nvim' " probably not going to keep this
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " LSP stuff
 Plug 'neovim/nvim-lspconfig'
@@ -64,7 +65,16 @@ set colorcolumn=80
 set completeopt=menu,menuone,noselect
 set scrolloff=8
 highlight ColorColumn ctermbg=0 guibg=lightgrey
-colorscheme gruvbox
+"colorscheme gruvbox
+let g:tokyonight_style = "storm"
+let g:tokyonight_italic_functions = 1
+let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+
+let g:tokyonight_colors = {
+  \ 'hint': 'orange',
+  \ 'error': '#ff0000'
+\ }
+colorscheme tokyonight
 
 lua require("lsp")
 "lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}

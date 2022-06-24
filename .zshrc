@@ -115,6 +115,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export GOPATH=$HOME/go
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$HOME/bin:$PATH"
+export PATH="$PATH:$HOME/dev/tools/flutter/bin"
 
 
 # Install Ruby Gems to ~/gems 

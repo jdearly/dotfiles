@@ -378,9 +378,9 @@ bar {
         statusline $gray
         # workspaces section            
         #                    border  backgr. text
-        focused_workspace    $aqua $aqua $darkgray
-        inactive_workspace   $darkgray $darkgray $gray
-        active_workspace     $darkgray $darkgray $gray
+    #    focused_workspace    $aqua $aqua $darkgray
+    #    inactive_workspace   $darkgray $darkgray $gray
+    #    active_workspace     $darkgray $darkgray $gray
         urgent_workspace     $red $red $bg
     }
 }
@@ -393,7 +393,6 @@ bindsym Mod1+Escape mode "passthrough"
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
-
 
 # Screen brightness keys
 # (This should work for both acpilight or xbacklight.)

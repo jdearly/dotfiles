@@ -10,8 +10,6 @@ set wildignore+=**/.git/*
 call plug#begin()
 
 " Colors/eye candy
-" Plug 'gruvbox-community/gruvbox'
-" Plug 'luisiacc/gruvbox-baby'
 Plug 'karb94/neoscroll.nvim' " probably not going to keep this
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'itchyny/lightline.vim'
@@ -38,10 +36,7 @@ Plug 'mfussenegger/nvim-dap'
 
 " Tree sitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
-" Plug 'nvim-treesetter/playground'
-
-Plug 'jceb/vim-orgmode'
-" Plug 'vim-airline/vim-airline'
+Plug 'nvim-treesetter/playground'
 
 " Fuzzy 
 Plug 'junegunn/fzf.vim'
@@ -65,25 +60,21 @@ set number
 set colorcolumn=80
 set completeopt=menu,menuone,noselect
 set scrolloff=8
+set noshowmode
 highlight ColorColumn ctermbg=0 guibg=lightgrey
-"colorscheme gruvbox
-"
-let g:lightline = {'colorscheme': 'tokyonight'}
-colorscheme tokyonight
 
+let g:lightline = {'colorscheme': 'tokyonight'}
 let g:tokyonight_style = "storm"
-let g:tokyonight_italic_functions = 1
-let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+let g:tokyonight_italic_keywords = 0
+let g:tokyonight_italic_comments = 0
+
 let g:tokyonight_colors = {
   \ 'hint': 'orange',
   \ 'error': '#ff0000'
 \ }
+colorscheme tokyonight 
 
 lua require("lsp")
-"lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}
-
-" let things
-" let g:gruvbox_contrast_dark='hard'
 
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 

@@ -28,7 +28,7 @@ font xft:CMU Sans Serif 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec kitty 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -179,7 +179,7 @@ workspace $ws10 output $monitor_right
 exec --no-startup-id i3-msg 'workspace 5:music; exec spotify'
 exec --no-startup-id i3-msg 'workspace 4:comm; exec discord'
 exec --no-startup-id i3-msg 'workspace 2:browser; exec brave-browser'
-exec --no-startup-id i3-msg 'workspace 1:term; exec konsole'
+exec --no-startup-id i3-msg 'workspace 1:term; exec kitty'
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -212,7 +212,7 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
-assign [class="konsole"] $ws1
+assign [class="kitty"] $ws1
 assign [class="Brave"] $ws2
 assign [class="discord"] $ws4
 for_window [class="Spotify"] move to workspace $ws5

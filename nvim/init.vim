@@ -29,6 +29,7 @@ Plug 'mfussenegger/nvim-jdtls'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Plug 'glepnir/lspsaga.nvim'
 " Plug 'simrat39/symbols-outline.nvim'
+Plug 'fladson/vim-kitty'
 
 " Debugging
 Plug 'mfussenegger/nvim-dap'

@@ -69,10 +69,11 @@ let g:tokyonight_style = "night"
 let g:tokyonight_italic_keywords = 0
 let g:tokyonight_italic_comments = 0
 
-let g:tokyonight_colors = {
-  \ 'hint': 'orange',
-  \ 'error': '#ff0000'
-\ }
+"let g:tokyonight_colors = {
+"  \ 'hint': 'orange',
+"  \ 'error': '#ff0000'
+"\ }
+
 colorscheme tokyonight 
 
 lua require("lsp")

@@ -371,18 +371,18 @@ bar {
 #	bindsym button5 nop
 #   font xft:URWGothic-Book 11
 	strip_workspace_numbers no
-    colors {
+    #colors {
         # bar background color
-        background $bg
+    #    background $bg
         # text color used for blocks that do not have a color specified.
-        statusline $gray
+    #    statusline $gray
         # workspaces section            
         #                    border  backgr. text
     #    focused_workspace    $aqua $aqua $darkgray
     #    inactive_workspace   $darkgray $darkgray $gray
     #    active_workspace     $darkgray $darkgray $gray
-        urgent_workspace     $red $red $bg
-    }
+    #    urgent_workspace     $red $red $bg
+    #}
 }
 
 mode "passthrough" {

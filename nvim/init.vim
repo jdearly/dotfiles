@@ -64,7 +64,7 @@ set noshowmode
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 let g:lightline = {'colorscheme': 'tokyonight'}
-let g:tokyonight_style = "storm"
+let g:tokyonight_style = "night"
 let g:tokyonight_italic_keywords = 0
 let g:tokyonight_italic_comments = 0
 

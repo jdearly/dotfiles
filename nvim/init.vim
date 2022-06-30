@@ -15,6 +15,7 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'itchyny/lightline.vim'
 
 " LSP stuff
+Plug 'williamboman/nvim-lsp-installer'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -37,7 +38,7 @@ Plug 'mfussenegger/nvim-dap'
 
 " Tree sitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
-Plug 'nvim-treesetter/playground'
+" Plug 'nvim-treesetter/playground'
 
 " Fuzzy 
 Plug 'junegunn/fzf.vim'

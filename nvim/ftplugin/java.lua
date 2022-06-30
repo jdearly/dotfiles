@@ -1,1 +1,1 @@
-/home/josh/dotfiles/java.lua
+/home/josh/dotfiles/nvim/lua/java.lua

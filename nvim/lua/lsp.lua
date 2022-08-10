@@ -2,7 +2,7 @@
 -- Parsers must be installed manually via :TSInstall
 require('nvim-treesitter.configs').setup {
 
-  ensure_installed = "maintained",
+  ensure_installed = {"c", "cpp", "python", "go", "javascript", "typescript", "rust", "java"},
 
   highlight = {
     enable = true, -- false will disable the whole extension
@@ -96,7 +96,7 @@ require("nvim-lsp-installer").setup({
 })
 
 -- Enable the following language servers
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'gopls'}
+local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'gopls', 'svelte'}
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,

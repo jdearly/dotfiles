@@ -62,8 +62,8 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 ################################################################################################
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 5; notify-send 'brightness up'"
-bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 5; notify-send 'brightness down'"
+# bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 5; notify-send 'brightness up'"
+# bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 5; notify-send 'brightness down'"
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
@@ -308,7 +308,7 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+9 exec --no-startup-id i3lock -i ~/Pictures/forest.png
+bindsym $mod+9 exec --no-startup-id i3lock -i ~/Pictures/wallpaper.png
 
 # Autostart applications
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg

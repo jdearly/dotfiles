@@ -243,17 +243,45 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 
+exec --no-startup-id wmctrl -c Plasma
 for_window [title="Desktop — Plasma"] kill, floating enable, border none
 for_window [class="Plasma"] floating enable, border none
 for_window [title="plasma-desktop"] floating enable, border none
 for_window [title="win7"] floating enable, border none
 for_window [class="krunner"] floating enable, border none
+for_window [class="kcalc"] floating enable, border none
+for_window [class="timeshift"] floating enable, border none
 for_window [class="Kmix"] floating enable, border none
 for_window [class="Klipper"] floating enable, border none
 for_window [class="Plasmoidviewer"] floating enable, border none
 for_window [class="(?i)*nextcloud*"] floating disable
 for_window [class="plasmashell" window_type="notification"] floating enable, border none, move position 2200px 35px 
 no_focus [class="plasmashell" window_type="notification"]
+# >>> Window rules <<<
+  # >>> Avoid tiling Plasma popups, dropdown windows, etc. <<<
+  # For the first time, manually resize them, i3 will remember the setting for floating windows
+    for_window [class="yakuake"] floating enable;
+    for_window [class="lattedock"] floating enable;
+    for_window [class="plasmashell"] floating enable;
+    for_window [class="Kmix"] floating enable; border none
+    for_window [class="kruler"] floating enable; border none
+    for_window [class="Plasma"] floating enable; border none
+    for_window [class="Klipper"] floating enable; border none
+    for_window [class="krunner"] floating enable; border none
+    for_window [class="Plasmoidviewer"] floating enable; border none
+    for_window [title="plasma-desktop"] floating enable; border none
+    for_window [class="plasmashell" window_type="notification"] floating enable, border none, move position 1450px 20px
+    no_focus [class="plasmashell" window_type="notification"] 
+
+  # >>> Avoid tiling for non-Plasma stuff <<<
+    for_window [window_role="pop-up"] floating enable
+    for_window [window_role="bubble"] floating enable
+    for_window [window_role="task_dialog"] floating enable
+    for_window [window_role="Preferences"] floating enable
+    for_window [window_role="About"] floating enable
+    for_window [window_type="dialog"] floating enable
+    for_window [window_type="menu"] floating enable
+    for_window [instance="__scratchpad"] floating enable
 
 for_window [urgent=latest] focus
 
@@ -314,10 +342,7 @@ bindsym $mod+9 exec --no-startup-id i3lock -i ~/Pictures/wallpaper.png
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
 #/usr/share/backgrounds/f34/default/f34-02-night.png
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id picom -b 
-#exec --no-startup-id nm-applet
-#exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
+exec --no-startup-id picom -cCFb 
 exec --no-startup-id xautolock -time 10 -locker i3lock -i ~/Pictures/wallpaper.jpg
 
 exec_always --no-startup-id ff-theme-util
@@ -406,13 +431,24 @@ bindsym $mod+m bar mode toggle
 #######
 
 # set primary gruvbox colorscheme colors
-set $bg #282828
-set $red #cc241d
-set $green #98971a
-set $yellow #d79921
-set $blue #458588
-set $purple #b16286
-set $aqua #689d68
+#set $bg #282828
+#set $red #cc241d
+#set $green #98971a
+#set $yellow #d79921
+#set $blue #458588
+#set $purple #b16286
+#set $aqua #689d68
+#set $gray #a89984
+#set $darkgray #1d2021
+
+# tokyo night
+set $bg #1a1b26
+set $red #f7768e
+set $green #9ece6a
+set $yellow #e0af68
+set $blue #7aa2f7
+set $purple #9a7ecc
+set $aqua #4abaaf
 set $gray #a89984
 set $darkgray #1d2021
 
@@ -430,9 +466,9 @@ set $darkgray #1d2021
 
 # blue gruvbox
 # class                 border|backgr|text|indicator|child_border
-client.focused          $blue $blue $darkgray $purple $darkgray
-client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
-client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
-client.urgent           $red $red $white $red $red
+#client.focused          $blue $bg $darkgray $purple $darkgray
+#client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
+#client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+#client.urgent           $red $red $white $red $red
 
 #end of window title bars & borders section

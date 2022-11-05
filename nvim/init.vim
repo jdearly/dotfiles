@@ -64,6 +64,7 @@ set completeopt=menu,menuone,noselect
 set scrolloff=8
 set noshowmode
 highlight ColorColumn ctermbg=0 guibg=lightgrey
+autocmd BufWritePre *.py :%s/\s\+$//e
 
 let g:lightline = {'colorscheme': 'tokyonight'}
 let g:tokyonight_style = "night"

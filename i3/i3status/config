@@ -26,7 +26,7 @@ order += "memory"
 order += "tztime local"
 
 cpu_usage {
-        format = " cpu  %usage "
+        format = "  %usage "
 }
 
 load {
@@ -35,7 +35,7 @@ load {
 }
 
 disk "/" {
-        format = " 🖴  %avail "
+        format = "  %avail "
 }
 
 wireless _first_ {

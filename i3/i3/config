@@ -152,9 +152,9 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1:term
+set $ws1 1:code
 set $ws2 2:browser
-set $ws3 3:ide
+set $ws3 3:docs
 set $ws4 4:comm
 set $ws5 5:music
 set $ws6 6:production

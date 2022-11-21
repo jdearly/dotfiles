@@ -179,6 +179,7 @@ workspace $ws10 output $monitor_right
 
 exec --no-startup-id i3-msg 'workspace 5:music; exec spotify'
 exec --no-startup-id i3-msg 'workspace 4:comm; exec discord'
+exec --no-startup-id i3-msg 'workspace 3:; exec zeal'
 exec --no-startup-id i3-msg 'workspace 2:; exec firefox'
 exec --no-startup-id i3-msg 'workspace 1:; exec kitty'
 

@@ -12,7 +12,10 @@ call plug#begin()
 " Colors/eye candy
 Plug 'karb94/neoscroll.nvim' " probably not going to keep this
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'itchyny/lightline.vim'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+" Plug 'itchyny/lightline.vim'
+Plug 'rose-pine/neovim'
 
 " LSP stuff
 Plug 'williamboman/nvim-lsp-installer'
@@ -66,19 +69,20 @@ set noshowmode
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 autocmd BufWritePre *.py :%s/\s\+$//e
 
-let g:lightline = {'colorscheme': 'tokyonight'}
-let g:tokyonight_style = "night"
-let g:tokyonight_italic_keywords = 0
-let g:tokyonight_italic_comments = 0
+"let g:lightline = {'colorscheme': 'tokyonight'}
+"let g:tokyonight_style = "night"
+"let g:tokyonight_italic_keywords = 0
+"let g:tokyonight_italic_comments = 0
 
 "let g:tokyonight_colors = {
 "  \ 'hint': 'orange',
 "  \ 'error': '#ff0000'
 "\ }
 
-colorscheme tokyonight 
+colorscheme rose-pine
 
-lua require("lsp")
+"lua require("lsp")
+lua require("init")
 
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 

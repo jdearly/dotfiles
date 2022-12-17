@@ -1,5 +1,5 @@
 require('lsp')
-require('java')
+-- require('java')
 require('lualine').setup {
   options = {
     icons_enabled = true,

@@ -337,14 +337,14 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+9 exec --no-startup-id i3lock -i ~/Pictures/wallpaper.png
+bindsym $mod+9 exec --no-startup-id i3lock -i ~/Pictures/island.png
 
 # Autostart applications
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/island.png
 #/usr/share/backgrounds/f34/default/f34-02-night.png
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id picom -cCFb 
-exec --no-startup-id xautolock -time 10 -locker i3lock -i ~/Pictures/wallpaper.jpg
+exec --no-startup-id xautolock -time 10 -locker i3lock -i ~/Pictures/island.png
 
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor

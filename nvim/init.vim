@@ -55,6 +55,9 @@ Plug 'sbdchd/neoformat'
 
 call plug#end()
 
+" Wiki
+Plug 'vimwiki/vimwiki'
+
 " set things
 syntax on
 set tabstop=4 softtabstop=4

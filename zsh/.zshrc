@@ -117,6 +117,9 @@ export PATH="$PATH:$GOPATH/bin"
 export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:$HOME/dev/tools/flutter/bin"
 
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # Install Ruby Gems to ~/gems 
 export GEM_HOME="$HOME/gems" 

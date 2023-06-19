@@ -34,12 +34,6 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
-  -- Neotree plugins
-  'nvim-neo-tree/neo-tree.nvim',
-  'nvim-tree/nvim-web-devicons',
-  'MunifTanjim/nui.nvim',
-  -- Go support
-  'fatih/vim-go',
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {
@@ -86,14 +80,14 @@ require('lazy').setup({
       end,
     },
   },
-  {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
-    priority = 1000,
-   config = function()
-     vim.cmd.colorscheme 'onedark'
-   end,
-  },
+  -- {
+  --   -- Theme inspired by Atom
+  --   'navarasu/onedark.nvim',
+  --   priority = 1000,
+  --  config = function()
+  --    vim.cmd.colorscheme 'onedark'
+  --  end,
+  -- },
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
@@ -101,7 +95,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = true,
-        --theme = 'auto',
+        theme = 'rose-pine',
         component_separators = '|',
         section_separators = '',
       },
@@ -177,7 +171,7 @@ vim.wo.colorcolumn = '80'
 vim.o.hlsearch = false
 
 -- Set default color 
--- vim.cmd('colorscheme rose-pine')
+vim.cmd('colorscheme rose-pine')
 -- Make line numbers default
 vim.wo.number = true
 
@@ -237,12 +231,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
- require('onedark').setup {
-   style = "dark",
-   term_colors = true
-   --transparent = true
- }
- require('onedark').load()
+ -- require('onedark').setup {
+ --   style = "dark",
+ --   term_colors = true
+ --   --transparent = true
+ -- }
+ -- require('onedark').load()
 
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`

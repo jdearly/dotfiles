@@ -6,5 +6,11 @@ return {
 
   -- Go support
   'fatih/vim-go',
-  { 'rose-pine/neovim', name = 'rose-pine' }
+  --{ 'rose-pine/neovim', name = 'rose-pine' },
+  'alligator/accent.vim',
+  -- bropilot
+  'github/copilot.vim',
+  -- colors
+  'mcchrish/zenbones.nvim',
+  'rktjmp/lush.nvim'
 }

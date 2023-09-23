@@ -95,7 +95,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = true,
-        theme = 'rose-pine',
+        theme = 'auto',
         component_separators = '|',
         section_separators = '',
       },
@@ -165,13 +165,15 @@ vim.o.relativenumber = true
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 vim.o.expandtab = true
 vim.wo.colorcolumn = '80'
 -- Set highlight on search
 vim.o.hlsearch = false
 
 -- Set default color 
-vim.cmd('colorscheme rose-pine')
+vim.cmd('colorscheme zenbones')
 -- Make line numbers default
 vim.wo.number = true
 
@@ -481,6 +483,48 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
+
+local function compile_run_cpp()
+  local src_path = vim.fn.expand('%:p:~')
+  local src_noext = vim.fn.expand('%:p:~:r'):gsub('<', '-')  -- Replace '<' with '-'
+  -- The building flags
+  local _flag = '-Wall -std=c++17 -O2'
+
+  local prog
+  if vim.fn.executable('clang++') == 1 then
+    prog = 'clang++'
+  elseif vim.fn.executable('g++') == 1 then
+    prog = 'g++'
+  else
+    vim.api.nvim_err_writeln('No compiler found!')
+    return
+  end
+
+  -- Create a new terminal buffer and execute the compilation and run command
+  vim.cmd('rightbelow vnew | term ' .. prog .. ' ' .. _flag .. ' ' .. src_path .. ' -o ' .. src_noext .. ' && ' .. src_noext)
+
+  vim.cmd('startinsert')
+end
+
+local function create_term_buf(_type, size)
+  vim.o.splitbelow = true
+  vim.o.splitright = true
+  if _type == 'v' then
+    vim.cmd('vnew')
+  else
+    vim.cmd('new')
+  end
+  vim.cmd('resize ' .. size)
+end
+
+vim.cmd("command! CompileRunCpp lua compile_run_cpp()")
+
+-- Create the keymapping using Lua API
+vim.keymap.set('n', '<F9>', ':call compile_run_cpp()<CR>', { noremap = true, silent = true })
+
+-- Export functions (optional, only if you want to call these functions from other Lua modules)
+vim.api.nvim_set_var('compile_run_cpp', compile_run_cpp)
+vim.api.nvim_set_var('create_term_buf', create_term_buf)
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

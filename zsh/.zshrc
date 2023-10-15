@@ -74,7 +74,7 @@ ZSH_THEME="minimal" #-- default theme
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-completions)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,9 +117,9 @@ export PATH="$PATH:$GOPATH/bin"
 export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:$HOME/dev/tools/flutter/bin"
 
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
 # Install Ruby Gems to ~/gems 
 export GEM_HOME="$HOME/gems" 

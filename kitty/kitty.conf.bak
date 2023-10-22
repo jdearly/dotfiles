@@ -10,6 +10,6 @@ copy_on_select clipboard
 
 
 # BEGIN_KITTY_THEME
-# Chalk
+# zenbones_dark
 include current-theme.conf
 # END_KITTY_THEME

@@ -46,16 +46,12 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
 #export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 . ~/git-completion.bash
 . ~/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWCOLORHINTS=Red
-export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+export PS1='\u@\h |> \W$(__git_ps1 " (%s)")\$ '
 
 # opam configuration
 [[ ! -r /home/josh/.opam/opam-init/init.zsh ]] || source /home/josh/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

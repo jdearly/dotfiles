@@ -51,7 +51,8 @@ export NVM_DIR="$HOME/.nvm"
 . ~/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWCOLORHINTS=Red
-export PS1='\u@\h |> \W$(__git_ps1 " (%s)")\$ '
+#export PS1='[\u@\h]-[\W$(__git_ps1 " (%s)")]\$ '
+export PS1='[\W$(__git_ps1 " (%s)")]\$ '
 
 # opam configuration
 [[ ! -r /home/josh/.opam/opam-init/init.zsh ]] || source /home/josh/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

@@ -26,17 +26,6 @@ fi
 
 unset rc
 
-alias ..="cd .."
-alias gst="git status"
-alias ll="ls -alF"
-alias la="ls -A"
-alias l="ls -CF"
-alias ubuntu_packages="comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)"
-alias vim="nvim"
-alias weather="curl wttr.in"
-alias doppler="mpv --loop-file=inf https://radar.weather.gov/lite/N0R/FCX_loop.gif"
-alias raudio="pulseaudio -k && sudo alsa force-reload"
-
 export PATH="$HOME/neovim/build/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export GOPATH=$HOME/go
@@ -82,6 +71,10 @@ export PS1='[\W$(__git_ps1 " (%s)")]\$ '
 
 # opam configuration
 [[ ! -r /home/josh/.opam/opam-init/init.zsh ]] || source /home/josh/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+if [ -f ~/.bash_aliases ]; then
+	. ~/.bash_aliases
+fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/josh/.sdkman"

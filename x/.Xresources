@@ -18,5 +18,5 @@ xterm*faceSize: 16
 xterm*termName: xterm-256color
 xterm*VT100.Translations: #override \
 	Ctrl <KeyPress> minus: smaller-vt-font() \n\
-	Ctrl <KeyPress> larger-vt-font() \n\
+	Ctrl <KeyPress> plus: larger-vt-font() \n\
 	Ctrl <KeyPress> 0: set-vt-font(d)

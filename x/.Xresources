@@ -9,3 +9,7 @@ rofi.color-normal: #1c2023, #919ba0, #1c2023, #a4a4a4, #1c2023
 rofi.color-urgent: argb:00000000, #f43753, argb:00000000, argb:00000000, #e29a49
 rofi.color-active: argb:00000000, #49bbfb, argb:00000000, argb:00000000, #e29a49
 rofi.kb-cancel: Escape,Alt+F1
+
+! Xterm
+xterm*background: black
+xterm*foreground: white

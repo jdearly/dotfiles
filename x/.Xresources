@@ -13,3 +13,9 @@ rofi.kb-cancel: Escape,Alt+F1
 ! Xterm
 xterm*background: black
 xterm*foreground: white
+xterm*faceName: Terminus
+xterm*faceSize: 16
+xterm*VT100.Translations: #override \
+	Ctrl <KeyPress> minus: smaller-vt-font() \n\
+	Ctrl <KeyPress> larger-vt-font() \n\
+	Ctrl <KeyPress> 0: set-vt-font(d)

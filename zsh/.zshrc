@@ -137,3 +137,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # opam configuration
 [[ ! -r /home/josh/.opam/opam-init/init.zsh ]] || source /home/josh/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+fastfetch
